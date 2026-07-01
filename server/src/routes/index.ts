@@ -1,0 +1,32 @@
+import { Router } from 'express';
+import { authRouter } from './auth.routes';
+import { userRouter } from './user.routes';
+import { setupRouter } from './setup.routes';
+import { inventoryRouter } from './inventory.routes';
+import { vendorRouter } from './vendor.routes';
+import { purchaseRouter } from './purchase.routes';
+import { customerRouter } from './customer.routes';
+import { saleRouter } from './sale.routes';
+import { cylinderRouter } from './cylinder.routes';
+import { expenseRouter } from './expense.routes';
+import { cashRouter } from './cash.routes';
+import { adjustmentRouter } from './adjustment.routes';
+import { reportRouter } from './report.routes';
+import { dashboardRouter } from './dashboard.routes';
+
+export const apiRouter = Router();
+
+apiRouter.use('/auth', authRouter);
+apiRouter.use('/users', userRouter);
+apiRouter.use('/setup', setupRouter);
+apiRouter.use('/inventory', inventoryRouter);
+apiRouter.use('/vendors', vendorRouter);
+apiRouter.use('/purchases', purchaseRouter);
+apiRouter.use('/customers', customerRouter);
+apiRouter.use('/sales', saleRouter);
+apiRouter.use('/cylinders', cylinderRouter);
+apiRouter.use('/expenses', expenseRouter);
+apiRouter.use('/cash', cashRouter);
+apiRouter.use('/adjustments', adjustmentRouter);
+apiRouter.use('/reports', reportRouter);
+apiRouter.use('/dashboard', dashboardRouter);
