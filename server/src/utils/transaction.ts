@@ -1,3 +1,5 @@
+import mongoose, { ClientSession } from "mongoose";
+
 export async function withTransaction<T>(
   fn: (session: ClientSession) => Promise<T>,
 ): Promise<T> {
